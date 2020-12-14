@@ -1,0 +1,458 @@
+/* ---------body---------  */
+
+body{
+	background-color:#000000;
+	background: url(../img/body.jpg) no-repeat center top;
+	background-size: cover;
+		background-attachment: fixed;
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0);
+}
+
+
+/* ---------header---------  */
+
+#header{
+	background-color:#000000;
+	color:#ffffff;
+	padding:0.5em 0.8em 0.5em 1.5em;
+	
+}
+
+/* ---------nav---------  */
+
+#nav{
+	display:inline;
+}
+
+.fa-bars{
+	font-size:1.4em;
+}
+
+.nav_item{
+	font-size:1.3em;
+	padding:1% 6% 1% 6%;
+	margin:0 1.5% 0 6%;
+	color:#ffffff;
+}
+.active_tab,
+.nav_item:hover{
+	background-color:#ffffff;
+	color:#000000;
+	border-radius:4px;
+}
+
+#nav a{
+	text-decoration:none;
+}
+
+#menu_bar{
+	color:#ffffff;
+	background-color:#000000;
+	border:none;
+	border-color:#000000;
+	margin:0 0.6em 0 0;
+	padding:0;
+}
+
+/* ---------banner---------  */
+
+#banner1{
+	height:73%;
+	background-image: url(../img/bg.jpg);
+	background-size:cover;
+	
+}
+
+#banner2{
+	height:73%;
+	background-image: url(../img/bg1.jpg);
+	background-size:cover;
+	
+}
+
+#banner3{
+	height:73%;
+	background-image: url(../img/bg2.jpg);
+	background-size:cover;
+	
+}
+
+.content_img{
+	width:15%;
+	padding:18% 0 0 1em;
+}
+
+.content_dis{
+	margin:-3.5em 0 0.5em 1em;
+	padding: 0 0 0.5em 6em;
+	font-size:0.73em;
+	font-style:oblique;
+}
+
+.content_box{
+	font-size:0.7em;
+	margin:1.5em 1.5em 0 1.5em;
+	padding:0 0 0.5em 0;
+	font-style:italic;
+	font-family:monospace;
+}
+
+.content_boxmd{
+	visibility:hidden;
+}
+
+.content_boxmd2{
+	visibility:hidden;
+}
+
+.content_boxmd3{
+	visibility:hidden;
+}
+
+.baner_sp{
+	color:#e5e5e5;
+}
+
+.baner_sp2{
+	color:#ffffff;
+}
+
+
+@media screen and (min-width:736px){
+	
+	#banner1{
+		height:100%;
+		background-image:none;
+		display:inline-block;
+		width:50%;
+		float:left;
+	}
+	
+	#banner2{
+		display:block;
+		background-image: url(../img/bg1.jpg);
+		height:40vh;
+	}
+	
+	#banner3{
+		background-image:none;
+		width:47%;
+		float:left;
+	}
+	
+	.content_img{
+		width:25%;
+		margin:-8vh 0 0 13vw;
+	}
+	
+	.content_sp{
+		width:10%;
+		margin:-40vh 0 0 0;
+	}
+	
+	.content_dis{
+		padding:5em 0 0 13vw;
+		display:block;
+		font-size:1em;
+	}
+	
+	.content_box{
+		visibility:hidden;
+	}
+
+	.content_boxmd{
+		visibility:visible;
+		display:inline-black;
+		width:75%;
+		text-align:center;
+		font-size:1.6em;
+		margin:2.5em 1em 0 2em; 
+	}
+	
+	.content_boxmd2{
+		visibility:visible;
+		display:block;
+		width:45%;
+		font-size:1.5em;
+		text-align:center;
+		float:left;
+		padding:2em 0 0 2em;
+		color:#ffffff;
+	}
+	
+	.content_boxmd3{
+		visibility:visible;
+		font-size:1.6em;
+		text-align:center;
+		padding:2em 0 0  2em;
+	}
+	
+	.baner_sp3{
+		color:#000000;
+	}
+	
+	.resume_pro{
+		display:block;
+		width:40%;
+		float:left;
+	}
+	
+	.resume_img{
+		padding:15vh 0 0 2em;
+	}
+	
+	.contact_pro{
+		width:40%;
+	}
+	
+	
+}
+
+/* ---------content---------  */
+
+#content{
+	margin:0.5em;
+	background:#e5e5e5;
+	padding:1em 0.8em 1em 0.8em;
+	border:1px solid #000000;
+	border-radius: 14px;
+}
+
+#content h1{
+	font-size:1.2em;
+	text-align:center;
+}
+
+#content p{
+	font-size:0.9em;
+	text-align:justify;
+	font-style:italic;
+}
+
+@media screen and (min-width:736px){
+	#content{
+		display:inline-block;
+		width:40%;
+		margin:6em 0 22vh 0;
+		float:left;
+	}
+}
+
+/* ---------form---------  */
+
+#form{
+	display:block;
+	background-color:#000000;
+	color:#ffffff;
+	height:88vh;
+}
+
+#form h1{
+	font-size:1.2em;
+	padding:1em 0 0.1em 0.8em;
+}
+
+#form h2{
+	font-size:0.9em;
+	padding:1em 0 0.1em 2em;
+}
+
+#form i{
+	font-size:0.7em;
+	padding: 0.01em 0 0 3em;
+	font-weight:250;
+	line-height:0.4em;
+}
+.contact_i{
+	font-size:0.7em;
+	font-weight:250;
+	line-height:0.4em;
+}
+
+#form hr{
+	width:80%;
+}
+.field{
+	display:block;
+	width:80%;
+	color:#555555;
+	background-color:#eeeeee;
+	border: 1px solid #cccccc;
+	border-radius:4px;
+	margin:1em 2em 1em 2em;
+	padding:0.4em;
+	font-family:monospace;
+}
+
+.sub_btn{
+	display:block;
+	width:84%;
+	margin:1em 2em 1em 2em;
+	padding:0.4em;
+	font-family:monospace;
+	font-weight:800;
+	background-color:#000000;
+	color:#ffffff;
+	border: 2px solid #ffffff;
+	border-radius:4px;
+}
+
+.sub_btn:active{
+	background-color:#ffffff;
+	color:#000000;
+	opacity:0.8;
+}
+
+.fa-whatsapp{
+	color:#61ce6f;
+}
+
+.fa-linkedin{
+	color:#0e76a8;
+}
+
+.fa-twitter{
+	color:#00acee;
+}
+
+.fa-envelope{
+	color:#EA4335;
+}
+
+@media screen and (min-width:736px){
+	#form{
+		width:45%;
+		float:left;
+		height:83vh;
+		margin:3em 0 0 2em;
+		border-radius:12px;
+	}
+	
+	
+}
+
+/* ---------resume---------  */
+
+#resume{
+	color:#ffffff;
+	background-color:#000000;
+	padding:1em;
+	margin: 1em 0.1em 0 0.1em;
+}
+
+#resume h1{
+	font-size:1.1em;
+}
+
+#resume h2{
+	font-size:0.83em;
+}
+
+#resume h3{
+	font-size:0.73em;
+	text-align:center;
+	color:#000000;
+}
+
+#resume p{
+	color:#000000;
+	font-size:0.73em;
+	text-align:center;
+	line-height:0.4em;
+}
+
+#resume li{
+	text-decoration:none;
+	font-size:0.65em;
+	color:#000000;
+	display:block;
+	padding:0 0 0 1em;
+}
+
+#resume a{
+	text-decoration:none;
+}
+
+.certificate{
+	width:100%;
+	border:2px solid #000000;
+}
+
+.box{
+	background-color:#e5e5e5;
+	padding:1em;
+	margin:1em;
+	border-radius:4px;
+}
+
+@media screen and (min-width:736px){
+	
+	#resume{
+		height:96vh;
+	}
+	
+	#resume h1{
+		font-size:1.7em;
+		text-align:center;
+	}
+	
+	#resume h2{
+		font-size:1.3em;
+	}
+	
+	#resume h3{
+		font-size:1em;	
+	}
+	
+	#resume p{
+		font-size:1em;
+	}
+	
+	#resume li{
+		font-size:0.9em;
+	}
+	
+	.box{
+		display:block;
+		width:40%;
+		float:left;
+	}
+}
+
+@media screen and (min-width:1000px){
+	#resume{
+		height:87vh
+	}
+	
+	.box{
+		padding:2em;
+	}
+}
+
+#footer{
+	background-color:#000000;
+	color:#ffffff;
+	height:1.8em;
+}
+
+#footer p{
+	padding:0.5em;
+	text-align:center;
+	font-size:0.9em;
+	font-style:italic;
+}
+
+@media screen and (min-width:736px){
+	#footer{
+		display:block;
+		float:left;
+		width:100%;
+		height:2em;
+		margin:1.5em 0 0 0;
+	}
+		
+	#footer p{
+		padding:0 0 0 1em;
+	}	
+}
