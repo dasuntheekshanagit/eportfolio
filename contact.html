@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+	<head>
+	
+		<title>Contact Me</title>
+		<meta charset = "UTF-8"/>
+		<meta name = "viewport" content = "width = device-width, initail-scale = 1"/>
+		<link rel = "stylesheet" href = "css/main.css">
+		<link rel = "stylesheet" href = "css/fontawesome/css/all.css">
+		<style>
+		@media screen and (min-width:736px){
+			body{
+				background: url(img/bg2.jpg) no-repeat center top;
+				background-size: cover;
+				min-height:80%;
+			}
+		
+			.content_img{
+				width:65%;
+				padding:8em 0 0 2em;
+			} 
+			
+			.content_dis{
+				visibility:hidden;
+			}
+			
+		}
+		</style>
+	
+	</head>
+	
+	<body onload = "hide()">
+	
+		<!--Header-->
+		<header id = "header">
+			<button id = "menu_bar"><i class="fas fa-bars" onmouseenter ="rotate()"></i></button>		
+		
+		<!--Nav-->
+		<nav id = "nav">
+				<a href ="index.html"><i class="fas fa-home nav_item"></i></a>
+				<a href ="resume.html"><i class="fas fa-award nav_item"></i></a>
+				<a href ="#"><i class="fas fa-phone nav_item active_tab"></i></a>
+		</nav>
+		
+		</header>
+		
+		<!--Banner-->
+		<div id = "banner3" onmouseenter ="hide()">
+			<div class = "content_boxmd3">
+				<h3>Strong isnt't about having a million strengths, It's about facing and dealing with your weaknesses.</h3>	
+			</div>
+			<div class = "contact_pro">
+				<img src = "img/dp.png" class = "content_img" alt = "profile pic">
+				<p class = "content_dis"><b>Dasun Theekshana</b><br>(Freelanser)</p>
+				<p class = "content_box">Strong isnt't about having a million strengths, It's about facing and dealing with your weaknesses.<br/> </p>
+			</div>
+		</div>
+		
+		<div id = "form" onmouseenter ="hide()">
+			<h1>Contact Me</h1>
+			<hr/>
+			<i></i><span class = "contact_i">&emsp;&emsp;Dasun Theekshana</span><br/>
+			<i class="fas fa-envelope"></i><span class = "contact_i">&emsp;dasun.theekshana.git@gmail.com</span><br/>
+			<i class="fab fa-twitter"></i><span class = "contact_i">&emsp;@dasuntheekshana</span><br/>
+			<i class="fab fa-whatsapp"></i><span class = "contact_i">&emsp;(+94)77 2455675</span> <br/>
+			<!-- <i class="fab fa-facebook-messenger"></i><br/> -->
+			<i class="fab fa-linkedin"></i><span class = "contact_i">&emsp;Dasun Theekshana</span>
+			<hr/>
+			<h2>Message</h2>
+			<form>
+				<input type = "text" name ="name" class = "field" id = "name" placeholder = "Your name..." required>
+				<input type = "email" name ="email" class = "field" id = "email" placeholder = "Your email..." required>
+				<input type = "text" name ="subject" class = "field" id = "subject" placeholder = "Subject..." required>
+				<textarea rows = "5" id = "message" class = "field" placeholder = "Your message..." required></textarea>
+				<button type = "submit" id = "submit_btn" class = "sub_btn">SEND NOW</button>
+			</form>
+		</div>		
+		
+		<!--Fotter-->
+		<footer id = "footer">
+		<p>&copy; Dasun Theekshana</p>
+		</footer>
+		
+		<!--Scripts-->
+		<script src = "js/main.js"></script>
+	</body>
+</html>
