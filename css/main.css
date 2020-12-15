@@ -367,7 +367,7 @@ body{
 	font-size:0.65em;
 	color:#000000;
 	display:block;
-	padding:0 0 0 0;
+	margin:0 0 0 -2em;
 }
 
 #resume a{
