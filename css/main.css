@@ -341,28 +341,35 @@ body{
 	margin: 1em 0.1em 0 0.1em;
 }
 
-#resume h1{
+#other{
+	color:#ffffff;
+	background-color:#000000;
+	padding:1em;
+	margin: 0 0.1em 0 0.1em;
+}
+
+#resume h1,#other h1{
 	font-size:1.1em;
 }
 
-#resume h2{
+#resume h2,#other h2{
 	font-size:0.83em;
 }
 
-#resume h3{
+#resume h3,#other h3{
 	font-size:0.73em;
 	text-align:center;
 	color:#000000;
 }
 
-#resume p{
+#resume p,#other p{
 	color:#000000;
 	font-size:0.73em;
 	text-align:center;
 	line-height:0.4em;
 }
 
-#resume li{
+#resume li,#other li{
 	text-decoration:none;
 	font-size:0.65em;
 	color:#000000;
@@ -370,7 +377,7 @@ body{
 	margin:0 0 0 -2em;
 }
 
-#resume li a{
+#resume li a,#other li a{
 	text-decoration:none;
 	color:#000000;
 }
@@ -424,6 +431,50 @@ body{
 @media screen and (min-width:1000px){
 	#resume{
 		height:87vh
+	}
+	
+	.box{
+		padding:2em;
+	}
+}
+
+@media screen and (min-width:736px){
+	
+	#other{
+		height:85vh;
+	}
+	
+	#other h1{
+		font-size:1.7em;
+		text-align:center;
+	}
+	
+	#other h2{
+		font-size:1.3em;
+	}
+	
+	#other h3{
+		font-size:1em;	
+	}
+	
+	#other p{
+		font-size:1em;
+	}
+	
+	#other li{
+		font-size:0.9em;
+	}
+	
+	.box{
+		display:block;
+		width:40%;
+		float:left;
+	}
+}
+
+@media screen and (min-width:1000px){
+	#other{
+		height:100vh
 	}
 	
 	.box{
