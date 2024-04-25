@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Add this line -->
     <style>
+        html {
+        scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Courier New', monospace;
         }
@@ -111,7 +115,7 @@
 
             .timeline-content {
             padding: 20px;
-            background: #1f1f1f;
+            background: #2c1f1f;
             -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
                     box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
             border-radius: 5px;
@@ -172,6 +176,39 @@
                 border-top: 1px solid #fff; /* White line */
                 padding-bottom: 20px;
                 padding-top: 0;
+            }
+            @keyframes slideInFromLeft {
+                0% {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes slideInFromRight {
+                0% {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            .timeline-content {
+                opacity: 0;
+            }
+
+            .timeline-content.animate-left {
+                animation: slideInFromLeft 1s forwards;
+            }
+
+            .timeline-content.animate-right {
+                animation: slideInFromRight 1s forwards;
             }
     </style>
 </head>
@@ -377,6 +414,33 @@
         function scrollToNextSection() {
             document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
         }
+    </script>
+    <script>
+        const timelineContents = document.querySelectorAll('.timeline-content');
+
+        const options = {
+            root: null, 
+            rootMargin: '0px', 
+            threshold: 0.5
+        };
+
+        function callback(entries, observer) { 
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const columnIndex = Array.from(entry.target.parentNode.children).indexOf(entry.target) % 3;
+                    if(columnIndex === 0) {
+                        entry.target.classList.add('animate-right');
+                    } else if(columnIndex === 2) {
+                        entry.target.classList.add('animate-left');
+                    }
+                } else {
+                    entry.target.classList.remove('animate-right', 'animate-left');
+                }
+            });
+        }
+        let observer = new IntersectionObserver(callback, options);
+
+        timelineContents.forEach(node => observer.observe(node));
     </script>
 </body>
 </html>
