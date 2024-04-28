@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dasun Theeksahan | Full Stack Devaloper</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Add this line -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assert/css/timeline.css">
+    <link rel="stylesheet" href="assert/css/header.css">
+    <link rel="stylesheet" href="assert/css/projects.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <style>
         html {
         scroll-behavior: smooth;
@@ -21,196 +25,199 @@
         .navbar-brand, .navbar-nav .nav-link {
             color: #04D361;
         }
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+        
+        #honors-awards {
+            background-color: #333; 
+            color: #ADD8E6; 
         }
 
-        #header-img {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        #honors-awards {
+            color: #FFFF00; 
         }
 
-        .arrow-container {
-            padding-top: 50px;
-            animation: bounce 2s infinite;
+        .section-title {
+            color: #f5f5f5; 
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
-        }
-        .header-text {
-            text-align: center;
-            padding: 0 20px;
-        }
-        .header-text h1 {
-            font-size: 7vw;
-            font-weight: bold; 
-        }
-
-        .header-text h4 {
-            font-size: 2vw; 
-        }
-        @media (max-width: 576px) {
-            .header-text h1 {
-                font-size: 12vw; 
-            }
-            .header-text h4 {
-                font-size: 6vw; 
-            }
-        }
-
-        /* 
-
-        .timeline {
-            position: relative;
-            padding: 50px 0;
-        }
-
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            margin-left: -1px;
-            background: #343a40; 
-        }*/
-        .design-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #1f1f1f;
-            min-height: 100vh;
-            padding: 100px 0;
-            font-family: Jost;
-        }
-
-        .design {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-            .timeline {
-            width: 80%;
-            height: auto;
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            }
-
-            .timeline-content {
-            padding: 20px;
-            background: #2c1f1f;
-            -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-                    box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-            border-radius: 5px;
-            color: white;
-            padding: 1.75rem;
-            transition: 0.4s ease;
-            overflow-wrap: break-word !important;
-            margin: 1rem;
+        .award-card {
+            border-left: 5px solid #04D361; 
+            background-color: #444; 
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            border-radius: 6px;
-            }
+            transition: transform 0.3s ease-in-out;
+            color: #ADD8E6;
+        }
 
-            .timeline-body{
-                padding-left: 20px;
-            }
-            .timeline-note{
-                font-size: 0.8em;
-            }
-            .timeline-component {
-            margin: 0px 20px 20px 20px;
-            }
+        .award-card .icon {
+            font-size: 2em;
+            color: #04D361;
+            margin-bottom: 10px;
+        }
 
-            @media screen and (min-width: 768px) {
-            .timeline {
-                display: grid;
-                grid-template-columns: 1fr 3px 1fr;
-            }
-            .timeline-middle {
-                position: relative;
-                background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
-                width: 3px;
-                height: 100%;
-            }
-            .main-middle {
-                opacity: 0;
-            }
-            .timeline-circle {
-                position: absolute;
-                top: 0;
-                left: 50%;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
-                -webkit-transform: translateX(-50%);
-                        transform: translateX(-50%);
-            }
-            }
+        .award-card h3 {
+            color: #FFFF00; 
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
 
-            .experience-header {
-                color: #fff; /* White text */
-                width: 80%;
-            }
+        .award-card p {
+            color: #ADD8E6; 
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
 
-            .line {
-                width: 80%;
-                margin: 0 auto;
-                border-top: 1px solid #fff; /* White line */
-                padding-bottom: 20px;
-                padding-top: 0;
-            }
-            @keyframes slideInFromLeft {
-                0% {
-                    transform: translateX(-100%);
-                    opacity: 0;
-                }
-                100% {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
+        #honors-awards hr {
+            border: 0;
+            height: 1px;
+            background: #f5f5f5; 
+            opacity: 0.2;
+        }
 
-            @keyframes slideInFromRight {
-                0% {
-                    transform: translateX(100%);
-                    opacity: 0;
-                }
-                100% {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
+        .award-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-            .timeline-content {
-                opacity: 0;
-            }
+        .award-card .row {
+            align-items: center;
+        }
 
-            .timeline-content.animate-left {
-                animation: slideInFromLeft 1s forwards;
-            }
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
 
-            .timeline-content.animate-right {
-                animation: slideInFromRight 1s forwards;
-            }
+        .fade-in {
+            animation-name: fadeIn;
+            animation-duration: 3s;
+        }
     </style>
+    <style>
+        
+
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
+    </style>
+
 </head>
 <body>
     <!-- Nav Bar -->
@@ -231,7 +238,7 @@
                     <a class="nav-link" href="#">$ACHIEVEMENTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">$PROJECTS</a>
+                    <a class="nav-link" href="#projects">$PROJECTS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">$LIFE</a>
@@ -380,11 +387,230 @@
     </section>
     <!-- End Experience -->
 
-    <!-- Experianc-->
-    <div style="height: 50vh;">
-        skjdfhskhf
-        dfjdsh
-    </div>
+    <!-- Honors & Awards -->
+    <section id="honors-awards" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Honors & Awards</h2>
+            <hr>
+            <!-- Award Card 1 -->
+            <div class="award-card mb-4 fade-in">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <i class="fas fa-award icon"></i>
+                        <h3>IEEE Innovation Nation Sri Lanka</h3>
+                        <p>Achievement: 3rd Place - Central Province (2023)</p>
+                        <p>Designed an AR first-person shooter game integrating guns and stationary devices, showcasing innovative use of augmented reality technology.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Award Card 2 -->
+            <div class="award-card mb-4 fade-in">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <i class="fas fa-trophy icon"></i>
+                        <h3>ACES Coders v10.0</h3>
+                        <p>Achievement: 9th Place (Out of 150+ Participants) (2023)</p>
+                        <p>An inter-university 12-hours overnight coding competition organized by the University of Peradeniya.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Award Card 3 -->
+            <div class="award-card mb-4 fade-in">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <i class="fas fa-medal icon"></i>
+                        <h3>ACES Hackathon</h3>
+                        <p>Achievement: Winners (2023)</p>
+                        <p>An intra-university hackathon competition organized by the University of Peradeniya. Developed 'Zero Cost NotePad,' leveraging image processing and machine learning, to create innovative notes with a pen on reusable surfaces, winning first place in a hackathon competition.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Award Card 4 -->
+            <div class="award-card mb-4 fade-in">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <i class="fas fa-trophy icon"></i>
+                        <h3>ACES Coders v9.0</h3>
+                        <p>Achievement: 12th Place (Out of 150+ Participants) (2022)</p>
+                        <p>An inter-university 12-hours overnight coding competition organized by the University of Peradeniya.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Award Card 5 -->
+            <div class="award-card mb-4 fade-in">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <i class="fas fa-bus icon"></i>
+                        <h3>IEEE Innovation Nation Sri Lanka</h3>
+                        <p>Achievement: Finalists - Central Province (2022)</p>
+                        <p>Created a smart bus ticket system enabling passengers to reserve seats, track bus locations, and notify drivers of their desired exit points.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Award Card 6 -->
+            <div class="award-card mb-4 fade-in">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <i class="fas fa-robot icon"></i>
+                        <h3>IESL RAS Robot Competition</h3>
+                        <p>Achievement: Most Popular Robot Award (2021)</p>
+                        <p>Awarded Most Popular Robot at IESL RAS Robot Competition for designing and implementing a line-following robot using Webots ROS2 software.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- End Honors and Awards -->
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="section-container">
+            <div class="experience-header">
+                <h2 class="text-center mb-5">PROJECTS</h2>
+                <hr class="line">
+            </div>
+            <section class="colour-block" data-aos="fade-up">
+                <div class="project-description">
+                    <h1>ARCombat | First-Person AR Game with Localization</h1>
+                    <ul class="card__skills">
+                        <li>Embedded Systems</li>  
+                        <li>Internet of Things (IoT)</li>
+                        <li>Augmented Reality (AR)</li>
+                    </ul>
+                    <p class="card-description">&nbsp;&nbsp;&nbsp;&nbsp;Collaborated with a team on the development of ARCombat, a groundbreaking 
+                        first-person AR game integrating VR and AR technologies for immersive multiplayer experiences. 
+                        Led the implementation of hardware components, including a custom 3D printed gun, ESPs, triggers, 
+                        and reload mechanisms, enhancing the game's interactivity.</p>
+                        <div class="project-links">
+                            <a href="https://cepdnaclk.github.io/e19-3yp-First-Person-AR-Game-with-Localization/" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="https://github.com/cepdnaclk/e19-3yp-First-Person-AR-Game-with-Localization" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                </div>
+                <div class="project-image">
+                    <img src="assert/img/arcombat.jpg" alt="Project Image">
+                </div>
+            </section>
+            <section class="white-block" data-aos="fade-up">
+                <div class="project-image">
+                    <img src="assert/img/babydevalopment.jpg" alt="Project Image">
+                </div>
+                <div class="project-description">
+                    <h1>Baby Development Tracking System</h1>
+                    <ul class="card__skills">
+                        <li>Java</li>  
+                        <li>Firebase</li>
+                        <li>Mobile Applications</li>
+                    </ul>
+                    <p class="card-description">&nbsp;&nbsp;&nbsp;&nbsp;Collaborated to develop a system to track and manage the developmental 
+                        milestones of infants aged 0 to 5 years. This system, tailored for parents, guardians, public 
+                        health midwives (PHM), and doctors, facilitates the registration of infants and records essential 
+                        metrics such as vaccinations, weight, and height. It also provides standard recommendations and 
+                        sends notifications and alerts to ensure timely care. Notably, the system features an AI chatbot 
+                        named Nanny, designed to offer guidance and support to users. The project's core objective is to 
+                        empower caregivers and healthcare professionals to provide optimal care for the healthy development
+                        of infants.</p>
+                        <div class="project-links">
+                            <a href="https://cepdnaclk.github.io/e19-co225-Baby-Developement-Tracking-System-Mobileapplication/" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="https://github.com/cepdnaclk/e19-co225-Baby-Developement-Tracking-System-Mobileapplication" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                </div>
+            </section>
+            <section class="colour-block" data-aos="fade-up">
+                <div class="project-description">
+                    <h1>Keyboard for the Visually Impaired</h1>       
+                    <ul class="card__skills">
+                        <li>Internet of Things (IoT)</li>  
+                        <li>Device Drivers</li>
+                        <li>C (Programming Language)</li>
+                    </ul>
+                    <p class="card-description">&nbsp;&nbsp;&nbsp;&nbsp;This keyboard utilizes accurate key combinations to generate characters 
+                        and incorporates auditory cues for each typed character, creating an empowering typing experience. 
+                        Featuring 9 pushbuttons with distinct roles, the keyboard supports over 50 characters and enables 
+                        wireless data transfer via Wi-Fi and Bluetooth connections. It simplifies user interaction through 
+                        standard Braille alphabet patterns, reducing the need for complex memorization. Additionally, the 
+                        system provides voice responses for real-time feedback, enhancing user experience and accuracy.</p>
+                        <div class="project-links">
+                            <a href="https://cepdnaclk.github.io/e19-co227-Keyboard-for-Visually-Impaired/" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="https://github.com/cepdnaclk/e19-co227-Keyboard-for-Visually-Impaired" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                </div>
+                <div class="project-image">
+                    <img src="assert/img/keyboard.png" alt="Project Image">
+                </div>
+            </section>
+            <section class="white-block" data-aos="fade-up">
+                <div class="project-image">
+                    <img src="assert/img/escal.png" alt="Project Image">
+                </div>
+                <div class="project-description">
+                    <h1>ESCAL Website</h1>    
+                    <ul class="card__skills">
+                        <li>Jekyll</li>  
+                        <li>Web Development</li>
+                    </ul>
+                    <p class="card-description">&nbsp;&nbsp;&nbsp;&nbsp;Contributed to developing the new website for the Embedded Systems and 
+                        Computer Architecture Laboratory (ESCAL) at the Department of Computer Engineering, University of 
+                        Peradeniya. Utilizing Jekyll as the static site generator and GitHub Pages for hosting, the website
+                        highlights ESCAL's research themes, projects, team members, and resources. I gained proficiency 
+                        in Jekyll, Liquid, HTML, CSS, and Python while creating and maintaining the website. Additionally,
+                        I collaborated effectively with other contributors using Git and GitHub, enhancing my web
+                        development and teamwork capabilities.</p>
+                        <div class="project-links">
+                            <a href="http://escal.ce.pdn.ac.lk/" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="https://github.com/cepdnaclk/escal-new" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                </div>
+            </section>
+            <section class="colour-block" data-aos="fade-up">
+                <div class="project-description">
+                    <h1>Python Based Text Adventure Game Based on Linux Terminal</h1>
+                    <ul class="card__skills">
+                        <li>Full-Stack Development</li>  
+                        <li>Flask</li>
+                    </ul>
+                    <p class="card-description">&nbsp;&nbsp;&nbsp;&nbsp;Developed 'Quest for the Hidden Ticket,' a web-based game utilizing 
+                        Linux terminal commands, specifically designed for newcomers in the Department of Computer 
+                        Engineering at the University of Peradeniya. The game's objective is to explore the department, 
+                        solve puzzles, and discover a hidden ticket before the welcome party commences. It is an 
+                        open-source project, encouraging contributions from fellow developers. This project provided me 
+                        with valuable skills in Python, Flask, game development, and project management, showcasing my 
+                        ability to create innovative and engaging gaming experiences.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/dasuntheekshanagit/e20welcome" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                </div>
+                <div class="project-image">
+                    <img src="assert/img/e20.jpg" alt="Project Image">
+                </div>
+            </section>
+          </div> 
+    </section>
+    <!-- End of Projects -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -392,6 +618,8 @@
     <!-- <script src="https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js" type="module"></script> -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="assert/js/stars.js"></script>
+    <script src="assert/js/experiance.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         var originalText = "Dasun@Theeksahan:~";
         var text = originalText;
@@ -416,31 +644,28 @@
         }
     </script>
     <script>
-        const timelineContents = document.querySelectorAll('.timeline-content');
-
-        const options = {
-            root: null, 
-            rootMargin: '0px', 
-            threshold: 0.5
-        };
-
-        function callback(entries, observer) { 
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    const columnIndex = Array.from(entry.target.parentNode.children).indexOf(entry.target) % 3;
-                    if(columnIndex === 0) {
-                        entry.target.classList.add('animate-right');
-                    } else if(columnIndex === 2) {
-                        entry.target.classList.add('animate-left');
-                    }
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        window.addEventListener('scroll', function() {
+            const awardCards = document.querySelectorAll('.award-card');
+            awardCards.forEach(function(card) {
+                if (isInViewport(card)) {
+                    card.classList.add('fade-in');
                 } else {
-                    entry.target.classList.remove('animate-right', 'animate-left');
+                    card.classList.remove('fade-in');
                 }
             });
-        }
-        let observer = new IntersectionObserver(callback, options);
-
-        timelineContents.forEach(node => observer.observe(node));
+        });
+    </script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>

@@ -1,0 +1,102 @@
+#projects {
+    background-color: #222;
+    color: #f5f5f5;
+    font-family: 'Jost';
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.colour-block, .white-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 80vw;
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.card__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style-type: none;
+    padding: 0;
+}
+
+.card__skills li {
+    background-color: #555;
+    padding: 0.2em 0.5em;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+}
+
+.card-description {
+    text-align: justify;
+}
+
+@media screen and (min-width: 600px) {
+    .colour-block, .white-block {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .project-description, .project-image {
+        flex: 1;
+    }
+}
+
+@keyframes fadeIn2 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.colour-block, .white-block {
+    animation: fadeIn2 2s ease-in;
+}
+
+@media screen and (max-width: 600px) {
+    .colour-block {
+        flex-direction: column-reverse;
+    }
+}
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.project-links i {
+    font-size: 1.5rem;
+}
