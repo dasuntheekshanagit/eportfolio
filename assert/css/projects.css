@@ -2,6 +2,8 @@
     background-color: #222;
     color: #f5f5f5;
     font-family: 'Jost';
+    background-image: url('../img/project.jpg');
+    background-repeat: repeat;
 }
 
 .section-container {
