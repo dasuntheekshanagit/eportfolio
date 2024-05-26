@@ -1,0 +1,259 @@
+#certifications{
+    background-image: url('../img/certificate.jpg');
+    background-blend-mode: soft-light;
+}
+#certificate {
+    padding: 30px;
+    /* background-color: #0A192F; #f9f9f9; */
+    /* background-image: url('assert/img/certificate.jpg'); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .fx-wrap {
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+    overflow: hidden;
+  }
+  .fx-wrap .certificate_card {
+    perspective: 1000px;
+    width: 324px;
+    height: 254px;
+    position: relative;
+  }
+  .fx-wrap .certificate_card>.front,
+  .fx-wrap .certificate_card>.back {
+    transition: transform 3s, z-index 3s 0s, box-shadow 3s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    will-change: transform;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 4px;
+    /* background-color: #fff; */
+    backface-visibility: hidden;
+  }
+  .fx-wrap .certificate_card>.front{
+      background-color: #b8860b ;
+      animation: animateBorder 2s infinite;
+      
+  }
+  @keyframes animateBorder {
+      0% {
+          background-color: #b8860b;
+      }
+      50% {
+          background-color: #e4be5e;
+      }
+      100% {
+          background-color: #b8860b;
+      }
+  }
+  .fx-wrap .certificate_card>.front:before,
+  .fx-wrap .certificate_card>.back:before {
+    transition: all 1s;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-image: linear-gradient(135deg, rgba(238,238,238,0) 0%, rgba(255,255,255,0) 36%, rgba(255,255,255,0.4) 36%, rgba(255,255,255,0.4) 68%, rgba(247,247,247,0) 69%, rgba(238,238,238,0) 70%);
+    background-repeat: no-repeat;
+    background-position: 324px 0;
+    pointer-events: none;
+    z-index: 20;
+  }
+  .fx-wrap .certificate_card>.front>*,
+  .fx-wrap .certificate_card>.back>* {
+    height: 100%;
+  }
+  .fx-wrap .certificate_card>.front .image,
+  .fx-wrap .certificate_card>.back .image {
+    float: left;
+  }
+  .fx-wrap .certificate_card>.front .text,
+  .fx-wrap .certificate_card>.back .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    float: right;
+  }
+  .fx-wrap .certificate_card>.front .text{
+      width: fit-content;
+      height: fit-content;
+  }
+  .fx-wrap .certificate_card>.back .text {
+      width: 216px;
+  }
+  .fx-wrap .certificate_card>.front .text button.flip,
+  .fx-wrap .certificate_card>.back .text button.flip {
+    border-radius: 9999em;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border: 0;
+    background-color: #ddd;
+    color: #fff;
+    font-size: 1.5em;
+    float: right;
+    flex: 1;
+    outline: 0;
+    transition: background-color 0.3s ease-in, transform 0.4s;
+    transition-delay: 0.1s;
+  }
+  .fx-wrap .certificate_card>.front .text button.flip:hover,
+  .fx-wrap .certificate_card>.back .text button.flip:hover {
+    background-color: #16a8cf;
+  }
+  .fx-wrap .certificate_card>.front .text button.flip:focus,
+  .fx-wrap .certificate_card>.back .text button.flip:focus {
+    transform: rotate(-360deg);
+  }
+  .fx-wrap .certificate_card>.front .text p,
+  .fx-wrap .certificate_card>.back .text p {
+    margin: 30px auto;
+    width: 80%;
+    flex: 2;
+  }
+  .fx-wrap .certificate_card>.front .text a,
+  .fx-wrap .certificate_card>.back .text a {
+    text-transform: uppercase;
+    margin: 10px auto;
+    text-align: right;
+    width: 80%;
+    display: block;
+    flex: 1;
+  }
+  .fx-wrap .certificate_card>.back .text a {
+    text-align: left;
+    width: 100%;
+    text-transform: none;
+  }
+  .fx-wrap .certificate_card>.front .image,
+  .fx-wrap .certificate_card>.back .image {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-size: cover;
+    width: 108px;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  .fx-wrap .certificate_card>.front .image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+  }
+  .fx-wrap .certificate_card>.front .image,
+  .fx-wrap .certificate_card>.back .image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: right;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .fx-wrap .certificate_card>.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  .fx-wrap .certificate_card>.back {
+    z-index: 1;
+    transform: rotateY(180deg);
+  }
+  .fx-wrap .certificate_card>.back header,
+  .fx-wrap .certificate_card>.back .text {
+    width: 100%;
+  }
+  .fx-wrap .certificate_card>.back header b,
+  .fx-wrap .certificate_card>.back .text b {
+    color: #0098a6;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .fx-wrap .certificate_card>.back header p,
+  .fx-wrap .certificate_card>.back .text p {
+    margin: 20px auto;
+  }
+  .fx-wrap .certificate_card.flip-it>.front {
+    transform: rotateY(-180deg);
+    z-index: 1;
+  }
+  .fx-wrap .certificate_card.flip-it>.back {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+  .fx-wrap .certificate_card.flip-it>.front:before,
+  .fx-wrap .certificate_card.flip-it>.back:before {
+    background-position: -324px 0;
+  }
+  .fx-wrap .certificate_card>.front .image .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); 
+      color: #fff; 
+  }
+  .front{
+      padding: 8px;
+  }
+  .front {
+      position: relative;
+      /* your existing styles */
+  }
+  
+  .title {
+      position: absolute;
+      bottom: -15px;
+      width: 95%;
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6); 
+      color: #fff; 
+      font-size: 20px; 
+  }
+  .badge-primary {
+      background-color: rgba(128, 128, 128, 0.5); /* Gray with 50% transparency */
+  }
+  .creditial {
+      color: inherit;
+      text-decoration: none;
+  }
+  .back {
+      background-color: #e5e4e2; /* This is a light gray color */
+      border: 8px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to left, #00ff00, #008000);
+  }
+  .certificate_card {
+      transition: transform 0.3s ease-in-out;
+  }
+  
+  .certificate_card:hover {
+      transform: scale(1.05);
+  }
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+  
+  .loader {
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid #3498db;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+  }
