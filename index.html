@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="assert/css/header.css">
     <link rel="stylesheet" href="assert/css/projects.css">
     <link rel="stylesheet" href="assert/css/certification.css">
-    <link rel="stylesheet" href="assert/css/contact.css"
+    <link rel="stylesheet" href="assert/css/contact.css">
+    <link rel="stylesheet" href="assert/css/awards.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <style>
         html {
@@ -29,73 +30,7 @@
             color: #04D361;
         }
         
-        #honors-awards {
-            background-color: #333; 
-            color: #ADD8E6; 
-        }
-
-        #honors-awards {
-            color: #FFFF00; 
-        }
-
-        .section-title {
-            color: #f5f5f5; 
-        }
-
-        .award-card {
-            border-left: 5px solid #04D361; 
-            background-color: #444; 
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
-            color: #ADD8E6;
-        }
-
-        .award-card .icon {
-            font-size: 2em;
-            color: #04D361;
-            margin-bottom: 10px;
-        }
-
-        .award-card h3 {
-            color: #FFFF00; 
-            margin-bottom: 10px;
-            font-size: 1.5em;
-        }
-
-        .award-card p {
-            color: #ADD8E6; 
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        #honors-awards hr {
-            border: 0;
-            height: 1px;
-            background: #f5f5f5; 
-            opacity: 0.2;
-        }
-
-        .award-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .award-card .row {
-            align-items: center;
-        }
-
-        @keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-        }
-
-        .fade-in {
-            animation-name: fadeIn;
-            animation-duration: 3s;
-        }
+      
     </style>
     <style>
         
@@ -238,16 +173,16 @@ body {
                     <a class="nav-link" href="#experience">$EXPERIENCE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">$ACHIEVEMENTS</a>
+                    <a class="nav-link" href="#honors-awards">$ACHIEVEMENTS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#projects">$PROJECTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">$LIFE</a>
+                    <a class="nav-link" href="#certifications">$CERTIFICATE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">$CONTACT</a>
+                    <a class="nav-link" href="#contact">$CONTACT</a>
                 </li>
             </ul>
         </div>
@@ -391,83 +326,112 @@ body {
     <!-- End Experience -->
 
     <!-- Honors & Awards -->
-    <section id="honors-awards" class="py-5">
+    <section id="honors-awards" class="py-5 award-section">
         <div class="container">
             <h2 class="section-title text-center mb-5">Honors & Awards</h2>
             <hr>
-            <!-- Award Card 1 -->
-            <div class="award-card mb-4 fade-in">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <i class="fas fa-award icon"></i>
+            <div class="award">
+                <div class="content-wrapper">
+                    <div class="badge-wrapper">
+                        <div class="award-main-wrapper">
+                            <div class="award-badge yellow">
+                                <div class="circle"><i class="fa fa-vr-cardboard"></i></div>
+                                <div class="award-ribbon">3<sup>rd</sup> Place</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-wrapper">
                         <h3>IEEE Innovation Nation Sri Lanka</h3>
-                        <p>Achievement: 3rd Place - Central Province (2023)</p>
-                        <p>Designed an AR first-person shooter game integrating guns and stationary devices, showcasing innovative use of augmented reality technology.</p>
+                        <p class="achievement"><span>3<sup>rd</sup> Place </span>- Central Province (2023)</p>
+                        <p class="description">Designed an AR first-person shooter game integrating guns and stationary devices, showcasing innovative use of augmented reality technology.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Award Card 2 -->
-            <div class="award-card mb-4 fade-in">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <i class="fas fa-trophy icon"></i>
+            <div class="award">
+                <div class="content-wrapper">
+                    <div class="badge-wrapper">
+                        <div class="award-main-wrapper">
+                            <div class="award-badge pink">
+                                <div class="circle"><i class="fa fa-code"></i></div>
+                                <div class="award-ribbon">9<sup>th</sup> Place</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-wrapper">
                         <h3>ACES Coders v10.0</h3>
-                        <p>Achievement: 9th Place (Out of 150+ Participants) (2023)</p>
-                        <p>An inter-university 12-hours overnight coding competition organized by the University of Peradeniya.</p>
+                        <p class="achievement"><span>9<sup>th</sup> Place</span> (Out of 150+ Participants) (2023)</p>
+                        <p class="description">An inter-university 12-hours overnight coding competition organized by the University of Peradeniya.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Award Card 3 -->
-            <div class="award-card mb-4 fade-in">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <i class="fas fa-medal icon"></i>
+            <div class="award">
+                <div class="content-wrapper">
+                    <div class="badge-wrapper">
+                        <div class="award-main-wrapper">
+                            <div class="award-badge red">
+                                <div class="circle"><i class="fa fa-tablet"></i></div>
+                                <div class="award-ribbon">Winners</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-wrapper">
                         <h3>ACES Hackathon</h3>
-                        <p>Achievement: Winners (2023)</p>
-                        <p>An intra-university hackathon competition organized by the University of Peradeniya. Developed 'Zero Cost NotePad,' leveraging image processing and machine learning, to create innovative notes with a pen on reusable surfaces, winning first place in a hackathon competition.</p>
+                        <p class="achievement"><span>Winners</span> (2023)</p>
+                        <p class="description">An intra-university hackathon competition organized by the University of Peradeniya. Developed 'Zero Cost NotePad,' leveraging image processing and machine learning, to create innovative notes with a pen on reusable surfaces, winning first place in a hackathon competition.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Award Card 4 -->
-            <div class="award-card mb-4 fade-in">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <i class="fas fa-trophy icon"></i>
+            <div class="award">
+                <div class="content-wrapper">
+                    <div class="badge-wrapper">
+                        <div class="award-main-wrapper">
+                            <div class="award-badge pink">
+                                <div class="circle"><i class="fa fa-code"></i></div>
+                                <div class="award-ribbon">12<sup>th</sup></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-wrapper">
                         <h3>ACES Coders v9.0</h3>
-                        <p>Achievement: 12th Place (Out of 150+ Participants) (2022)</p>
-                        <p>An inter-university 12-hours overnight coding competition organized by the University of Peradeniya.</p>
+                        <p class="achievement"><span>12<sup>th</sup></span> Place (Out of 150+ Participants) (2022)</p>
+                        <p class="description">An inter-university 12-hours overnight coding competition organized by the University of Peradeniya.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Award Card 5 -->
-            <div class="award-card mb-4 fade-in">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <i class="fas fa-bus icon"></i>
+            <div class="award">
+                <div class="content-wrapper">
+                    <div class="badge-wrapper">
+                        <div class="award-main-wrapper">
+                            <div class="award-badge yellow">
+                                <div class="circle"><i class="fa fa-bus"></i></div>
+                                <div class="award-ribbon">Finalists</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-wrapper">
                         <h3>IEEE Innovation Nation Sri Lanka</h3>
-                        <p>Achievement: Finalists - Central Province (2022)</p>
-                        <p>Created a smart bus ticket system enabling passengers to reserve seats, track bus locations, and notify drivers of their desired exit points.</p>
+                        <p class="achievement"><span>Finalists</span> - Central Province (2022)</p>
+                        <p class="description">Created a smart bus ticket system enabling passengers to reserve seats, track bus locations, and notify drivers of their desired exit points.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Award Card 6 -->
-            <div class="award-card mb-4 fade-in">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <i class="fas fa-robot icon"></i>
+            <div class="award">
+                <div class="content-wrapper">
+                    <div class="badge-wrapper">
+                        <div class="award-main-wrapper">
+                            <div class="award-badge teal">
+                                <div class="circle"><i class="fa fa-robot"></i></div>
+                                <div class="award-ribbon">Winners</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-wrapper">
                         <h3>IESL RAS Robot Competition</h3>
-                        <p>Achievement: Most Popular Robot Award (2021)</p>
-                        <p>Awarded Most Popular Robot at IESL RAS Robot Competition for designing and implementing a line-following robot using Webots ROS2 software.</p>
+                        <p class="achievement"><span>Most Popular Robot Award</span> (2021)</p>
+                        <p class="description">Awarded Most Popular Robot at IESL RAS Robot Competition for designing and implementing a line-following robot using Webots ROS2 software.</p>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </section>
     <!-- End Honors and Awards -->
