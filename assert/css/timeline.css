@@ -121,3 +121,8 @@ margin: 0px 20px 20px 20px;
 .timeline-content.animate-right {
     animation: slideInFromRight 1s forwards;
 }
+
+#experience{
+    z-index: 2;
+    position: relative;
+}

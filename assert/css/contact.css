@@ -1,0 +1,64 @@
+#contact {
+    background: #FFF;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+    position: relative;
+}
+
+.skewed-bg {
+    background: #00B285;
+    padding: 200px 0;
+    transform: skew(0deg, -10deg);
+    margin-top: -200px;
+    /* z-index: 1;
+    position: relative; */
+}
+.skewed-bg .contact-content {
+    transform: skew(0deg, 10deg);
+    text-align: center;
+}
+.skewed-bg .contact-content .contact-title {
+    padding-top: 100px;
+    font-weight: normal;
+}
+.skewed-bg .contact-content .contact-text {
+    width: 60%;
+    margin: 25px auto;
+    color: #ccfff2;
+}
+.skewed-bg .contact-content .download-button {
+    margin-top: 20px;
+    padding: 15px 25px;
+    background: #008f68;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.skewed-bg .contact-content .download-button:hover {
+    background: #005f4a;
+}
+
+.skewed-second {
+    padding-top: 50px;
+    text-align: center;
+    /* z-index: 2; */
+}
+.skewed-second .contact-info {
+    margin-top: 50px;
+}
+.skewed-second .contact-info a {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #00B285;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+.skewed-second .contact-info a:hover {
+    color: #008f68;
+}
+.skewed-second .contact-info a .fa {
+    margin-right: 8px;
+}
