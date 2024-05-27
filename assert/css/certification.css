@@ -1,6 +1,8 @@
 #certifications{
     background-image: url('../img/certificate.jpg');
     background-blend-mode: soft-light;
+    z-index: 2;
+    position: relative;
 }
 #certificate {
   padding: 30px;
