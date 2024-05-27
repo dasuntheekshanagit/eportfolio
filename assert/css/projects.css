@@ -1,9 +1,10 @@
 #projects {
-    background-color: #222;
+    background-color: #563727;
     color: #f5f5f5;
     font-family: 'Jost';
-    background-image: url('../img/project.jpg');
-    background-repeat: repeat;
+    /* background: linear-gradient(to bottom, #FF4546, #4A00AE);; */
+    /* background-image: url('../img/project.jpg');
+    background-repeat: repeat; */
 }
 
 .section-container {
@@ -21,8 +22,9 @@
     gap: 2rem;
     width: 100%;
     max-width: 80vw;
-    background-color: #333;
-    color: #f5f5f5;
+    background: linear-gradient(to bottom, #563727, #372C2E);;
+    /* background-color: #563727; */
+    color: #F8F8F8;
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -54,7 +56,7 @@
 }
 
 .card__skills li {
-    background-color: #555;
+    background-color: #DB2C1C;
     padding: 0.2em 0.5em;
     border-radius: 0.3em;
     font-size: 0.8em;
