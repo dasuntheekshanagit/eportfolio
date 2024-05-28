@@ -32,7 +32,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git pull --rebase
-        git add ${{ steps.sitemap.outputs.sitemap-path }}
-        git commit -m "Update sitemap"
-        git push
+        git pull --rebase || { echo 'Rebase failed'; git rebase --abort; exit 1; }
+        git add "${{ steps.sitemap.outputs.sitemap-path }}"
+        git commit -m "Update sitemap" || echo "No changes to commit"
+        git push || { echo 'Push failed'; exit 1; }
