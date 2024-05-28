@@ -19,7 +19,7 @@ jobs:
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: https: https://dasuntheekshanagit.github.io/eportfolio/
+        base-url-path: https://dasuntheekshanagit.github.io/eportfolio/
 
     - name: Output stats
       run: |
