@@ -4,157 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dasun Theeksahan | Full Stack Devaloper</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="assert/css/timeline.css">
     <link rel="stylesheet" href="assert/css/header.css">
     <link rel="stylesheet" href="assert/css/projects.css">
     <link rel="stylesheet" href="assert/css/certification.css">
     <link rel="stylesheet" href="assert/css/contact.css">
     <link rel="stylesheet" href="assert/css/awards.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-        html {
-        scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Courier New', monospace;
-        }
-        .navbar {
-            background-color: #2e3436;
-            height: 8vh;
-        }
-        .navbar-brand, .navbar-nav .nav-link {
-            color: #04D361;
-        }
-        
-      
-    </style>
-    <style>
-        
-
-:root {
-  --surface-color: #fff;
-  --curve: 40;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background-color: #fef8f8;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 4rem 5vw;
-  padding: 0;
-  list-style-type: none;
-}
-
-.card {
-  position: relative;
-  display: block;
-  height: 100%;  
-  border-radius: calc(var(--curve) * 1px);
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.card__image {      
-  width: 100%;
-  height: auto;
-}
-
-.card__overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;      
-  border-radius: calc(var(--curve) * 1px);    
-  background-color: var(--surface-color);      
-  transform: translateY(100%);
-  transition: .2s ease-in-out;
-}
-
-.card:hover .card__overlay {
-  transform: translateY(0);
-}
-
-.card__header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 2em;
-  padding: 2em;
-  border-radius: calc(var(--curve) * 1px) 0 0 0;    
-  background-color: var(--surface-color);
-  transform: translateY(-100%);
-  transition: .2s ease-in-out;
-}
-
-.card__arc {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  bottom: 100%;
-  right: 0;      
-  z-index: 1;
-}
-
-.card__arc path {
-  fill: var(--surface-color);
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-}       
-
-.card:hover .card__header {
-  transform: translateY(0);
-}
-
-.card__thumb {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;      
-  border-radius: 50%;      
-}
-
-.card__title {
-  font-size: 1em;
-  margin: 0 0 .3em;
-  color: #6A515E;
-}
-
-.card__tagline {
-  display: block;
-  margin: 1em 0;
-  font-family: "MockFlowFont";  
-  font-size: .8em; 
-  color: #D7BDCA;  
-}
-
-.card__status {
-  font-size: .8em;
-  color: #D7BDCA;
-}
-
-.card__description {
-  padding: 0 2em 2em;
-  margin: 0;
-  color: #D7BDCA;
-  font-family: "MockFlowFont";   
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-}    
-    </style>
+    <link rel="stylesheet" href="assert/css/main.css">
 
 </head>
 <body>
@@ -819,71 +680,10 @@ body {
     <script src="assert/js/stars.js"></script>
     <script src="assert/js/experiance.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        var originalText = "Dasun@Theeksahan:~";
-        var text = originalText;
-        var roundLogEl = document.querySelector('.navbar-brand span');
-
-        function typewriter() {
-            if (text.length > 0) {
-                roundLogEl.innerHTML += text.charAt(0);
-                text = text.substr(1);
-                setTimeout(typewriter, 100);
-            } else {
-                roundLogEl.innerHTML = '';
-                text = originalText;
-                setTimeout(typewriter, 1000); // delay before restarting
-            }
-        }
-
-        typewriter();
-
-        function scrollToNextSection() {
-            document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
-    <script>
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-        window.addEventListener('scroll', function() {
-            const awardCards = document.querySelectorAll('.award-card');
-            awardCards.forEach(function(card) {
-                if (isInViewport(card)) {
-                    card.classList.add('fade-in');
-                } else {
-                    card.classList.remove('fade-in');
-                }
-            });
-        });
-    </script>
+    <script src="assert/js/main.js"></script>
     <script>
         AOS.init();
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).on('click', '.flip', function () {
-        let card = $(this).closest('.certificate_card');
-        if (card.hasClass('flip-it')) card.removeClass('flip-it');else
-        card.addClass('flip-it');
-        });
-
-
-        $('.certificate_card').each(function () {
-            let href = $(this).data('href');
-            $(this).find('.front-wrapper').css({
-                'background-image': 'url(' + href + ')',
-                'background-size': 'contain',
-                'background-position': 'center',
-                'background-repeat': 'no-repeat'
-            });
-        });
-    </script>
 </body>
 </html>
