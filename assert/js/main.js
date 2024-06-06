@@ -53,6 +53,7 @@ $(document).on('click', '.flip', function () {
             'background-image': 'url(' + href + ')',
             'background-size': 'contain',
             'background-position': 'center',
-            'background-repeat': 'no-repeat'
+            'background-repeat': 'no-repeat',
+            'class' : 'lazyload'
         });
     });
