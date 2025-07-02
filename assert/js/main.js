@@ -54,6 +54,7 @@ $(document).on('click', '.flip', function () {
             'background-size': 'contain',
             'background-position': 'center',
             'background-repeat': 'no-repeat',
-            'class' : 'lazyload'
+            'class' : 'lazyload',
+            'loading': 'lazy'
         });
     });
